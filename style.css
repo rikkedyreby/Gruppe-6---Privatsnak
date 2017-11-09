@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+#scene {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#baggrund{
+    width: 100%;
+    height: 100%;
+    background-image:url(png/baggrund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#mellemgrund{
+    width: 100%;
+    height: 100%;
+    background-image:url(png/mellemgrund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+
+#forgrund{
+    width: 100%;
+    height: 100%;
+    background-image:url(png/forgrund.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+/************************************SCENE SLUT************************************/
