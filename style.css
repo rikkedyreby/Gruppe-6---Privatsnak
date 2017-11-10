@@ -39,3 +39,171 @@ body {
 }
 
 /************************************SCENE SLUT************************************/
+
+
+
+
+
+
+/************************************OSKAR SPRITE************************************/
+
+#oskar_sprite {
+    background-image:url(oskar_asset_og_spritesheet%20copy_oskar%20copy%207.svg);
+    width: 26.66vw;
+    height: 40.00vw;
+    background-size: 400%;
+}
+
+/******WALKCYCLE******/
+
+.oskar_walkcycle {
+    animation-name: oskar_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes oskar_walkcycle_kf {
+     0% {
+        background-position:  0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+/************************************OSKAR SPRITE SLUT************************************/
+
+
+
+
+
+/************************************OSKAR CONTAINER************************************/
+
+#oskar_container {
+    position: absolute;
+    overflow: hidden;
+}
+
+/******MOVE RIGHT******/
+
+.move_right {
+    animation-name: move_right_kf;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes move_right_kf {
+     0% {
+        top:25%;
+        left:10%;
+    }
+    100% {
+        top:25%;
+        left:50%;
+    }
+}
+
+
+/************************************OSKAR CONTAINER SLUT************************************/
+
+
+
+
+
+/************************************DRENG1 SPRITE************************************/
+
+#dreng1_sprite {
+    background-image:url(dreng1_asset_og_spritesheet+laughcycle.svg);
+    width: 28vw;
+    height: 42.00vw;
+    background-size: 400%;
+}
+
+
+
+/******LAUGHCYCLE******/
+
+.dreng1_laughcycle {
+    animation-name: dreng1_laughcycle_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_laughcycle_kf {
+     0% {
+        background-position:  0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+/************************************DRENG1 SPRITE SLUT************************************/
+
+
+
+
+
+/************************************DRENG1 CONTAINER************************************/
+
+#dreng1_container {
+    position: absolute;
+    overflow: hidden;
+    top: 22%;
+    left: 15%
+}
+
+/************************************DRENG1 CONTAINER SLUT************************************/
+
+
+
+
+
+
+/************************************DRENG2 SPRITE************************************/
+
+#dreng2_sprite {
+    background-image:url(dreng2_asset_og_spritesheet+laughcycle.svg);
+     width: 28vw;
+    height: 42.00vw;
+    background-size: 400%;
+}
+
+/******LAUGHCYCLE******/
+
+.dreng2_laughcycle {
+    animation-name: dreng2_laughcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng2_laughcycle_kf {
+     0% {
+        background-position:  0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+/************************************DRENG2 SPRITE SLUT************************************/
+
+
+
+
+
+/************************************DRENG2 CONTAINER************************************/
+
+#dreng2_container {
+    position: absolute;
+    overflow: hidden;
+    top: 25%;
+    left: 0;
+}
+
+/************************************DRENG2 CONTAINER SLUT************************************/
