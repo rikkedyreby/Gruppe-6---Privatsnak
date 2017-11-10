@@ -114,10 +114,23 @@ body {
 /************************************DRENG1 SPRITE************************************/
 
 #dreng1_sprite {
-    background-image:url(media/dreng1_test.svg);
+    background-image:url(media/dreng1_spritesheet.svg);
     width: 28vw;
     height: 42.00vw;
-    background-size: 400%;
+    background-size: 900%;
+}
+
+/******START POSE******/
+
+.dreng1_start_pose {
+    background-position: 0 50%;
+}
+
+
+/******SLET BILLEDE POSE******/
+
+.dreng1_slet {
+    background-position: 0 100%;
 }
 
 
@@ -134,10 +147,48 @@ body {
 
 @keyframes dreng1_laughcycle_kf {
      0% {
-        background-position:  0%;
+        background-position:  0% 75%;
     }
     100% {
-        background-position: -400%;
+        background-position: -400% 75%;
+    }
+}
+
+/******WALKCYCLE******/
+
+.dreng1_walkcycle {
+    animation-name: dreng1_walkcycle_kf;
+    animation-duration: 1.2s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_walkcycle_kf {
+     0% {
+        background-position:  0% 25%;
+    }
+    100% {
+        background-position: -400% 25%;
+    }
+}
+
+/******PULL******/
+
+.dreng1_pull {
+    animation-name: dreng1_pull_kf;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(9);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_pull_kf {
+     0% {
+        background-position:  0% 0%;
+    }
+    100% {
+        background-position: -900% 0%;
     }
 }
 
@@ -166,11 +217,26 @@ body {
 /************************************DRENG2 SPRITE************************************/
 
 #dreng2_sprite {
-    background-image:url(media/dreng2_test.svg);
+    background-image:url(media/dreng2_spritesheet.svg);
      width: 28vw;
     height: 42.00vw;
     background-size: 400%;
 }
+
+/******START POSE******/
+
+.dreng2_start_pose {
+    background-position: 0 0;
+}
+
+
+/******SLET BILLEDE POSE******/
+
+.dreng2_slet {
+    background-position: 0 32%;
+}
+
+
 
 /******LAUGHCYCLE******/
 
@@ -184,10 +250,29 @@ body {
 
 @keyframes dreng2_laughcycle_kf {
      0% {
-        background-position:  0%;
+        background-position:  0% 100%;
     }
     100% {
-        background-position: -400%;
+        background-position: -400% 100% ;
+    }
+}
+
+/******WALKCYCLE******/
+
+.dreng2_walkcycle {
+    animation-name: dreng2_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng2_walkcycle_kf {
+     0% {
+        background-position:  0% 65%;
+    }
+    100% {
+        background-position: -400% 65% ;
     }
 }
 
