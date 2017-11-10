@@ -48,7 +48,7 @@ body {
 /************************************OSKAR SPRITE************************************/
 
 #oskar_sprite {
-    background-image:url(oskar_asset_og_spritesheet%20copy_oskar%20copy%207.svg);
+    background-image:url(media/oskar_test.svg);
     width: 26.66vw;
     height: 40.00vw;
     background-size: 400%;
@@ -114,7 +114,7 @@ body {
 /************************************DRENG1 SPRITE************************************/
 
 #dreng1_sprite {
-    background-image:url(dreng1_asset_og_spritesheet+laughcycle.svg);
+    background-image:url(media/dreng1_test.svg);
     width: 28vw;
     height: 42.00vw;
     background-size: 400%;
@@ -166,7 +166,7 @@ body {
 /************************************DRENG2 SPRITE************************************/
 
 #dreng2_sprite {
-    background-image:url(dreng2_asset_og_spritesheet+laughcycle.svg);
+    background-image:url(media/dreng2_test.svg);
      width: 28vw;
     height: 42.00vw;
     background-size: 400%;
