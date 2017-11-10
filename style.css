@@ -10,32 +10,339 @@ body {
     overflow: hidden;
 }
 
-#baggrund{
+#baggrund {
     width: 100%;
     height: 100%;
-    background-image:url(png/baggrund.png);
+    background-image: url(png/baggrund.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
 }
 
-#mellemgrund{
+#mellemgrund {
     width: 100%;
     height: 100%;
-    background-image:url(png/mellemgrund.png);
+    background-image: url(png/mellemgrund.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
 }
 
 
-#forgrund{
+#forgrund {
     width: 100%;
     height: 100%;
-    background-image:url(png/forgrund.png);
+    background-image: url(png/forgrund.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
 }
 
 /************************************SCENE SLUT************************************/
+
+#bruser_container {
+    position: absolute;
+    overflow: hidden;
+}
+
+.dryp_pose {
+    top: 14%;
+    left: 0%;
+
+
+}
+
+#bruser_sprite {
+    background-image:url(bruser_drypper_asset.svg);
+    width: 31.33vw;
+    height: 47.00vw;
+    background-size: 1600%;
+
+}
+
+.bruser_dryp {
+    animation-name: bruser_dryp_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(16);
+}
+
+@keyframes bruser_dryp_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -1600%;
+    }
+}
+
+/************************************OSKAR SPRITE************************************/
+
+#oskar_sprite {
+    background-image: url(oskar_asset_og_spritesheet+haandklaede_paa.svg);
+    width: 26.66vw;
+    height: 40.00vw;
+    background-size: 2100%;
+}
+
+/******WALKCYCLE******/
+
+.oskar_walkcycle {
+    animation-name: oskar_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes oskar_walkcycle_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+/******HÅNDKLÆDE NED******/
+
+.oskar_ned {
+    animation-name: oskar_ned_kf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(7);
+}
+
+@keyframes oskar_ned_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -700%;
+    }
+}
+
+/******HÅNDKLÆDE OP******/
+
+.oskar_up {
+    animation-name: oskar_up_kf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(21);
+}
+
+@keyframes oskar_up_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -2100%;
+    }
+}
+
+/************************************OSKAR SPRITE SLUT************************************/
+
+/************************************OSKAR CONTAINER************************************/
+
+#oskar_container {
+    position: absolute;
+    overflow: hidden;
+}
+
+/******POSE******/
+
+.pose {
+    top: 25%;
+    left: 50%;
+}
+
+
+/******MOVE RIGHT******/
+
+.move_right {
+    animation-name: move_right_kf;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move_right_kf {
+    0% {
+        top: 25%;
+        left: 10%;
+    }
+    100% {
+        top: 25%;
+        left: 50%;
+    }
+}
+
+
+/************************************OSKAR CONTAINER SLUT************************************/
+
+/************************************DRENG1 SPRITE************************************/
+
+#dreng1_sprite {
+    background-image: url(media/dreng1_spritesheet.svg);
+    width: 28vw;
+    height: 42.00vw;
+    background-size: 900%;
+}
+
+/******START POSE******/
+
+.dreng1_start_pose {
+    background-position: 0 50%;
+}
+
+
+/******SLET BILLEDE POSE******/
+
+.dreng1_slet {
+    background-position: 0 100%;
+}
+
+
+
+/******LAUGHCYCLE******/
+
+.dreng1_laughcycle {
+    animation-name: dreng1_laughcycle_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_laughcycle_kf {
+    0% {
+        background-position: 0% 75%;
+    }
+    100% {
+        background-position: -400% 75%;
+    }
+}
+
+/******WALKCYCLE******/
+
+.dreng1_walkcycle {
+    animation-name: dreng1_walkcycle_kf;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_walkcycle_kf {
+    0% {
+        background-position: 0% 25%;
+    }
+    100% {
+        background-position: -400% 25%;
+    }
+}
+
+/******PULL******/
+
+.dreng1_pull {
+    animation-name: dreng1_pull_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(9);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng1_pull_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -900% 0%;
+    }
+}
+
+/************************************DRENG1 SPRITE SLUT************************************/
+
+/************************************DRENG1 CONTAINER************************************/
+
+#dreng1_container {
+    position: absolute;
+    overflow: hidden;
+    top: 22%;
+    left: 15%
+}
+
+/************************************DRENG1 CONTAINER SLUT************************************/
+
+/************************************DRENG2 SPRITE************************************/
+
+#dreng2_sprite {
+    background-image: url(media/dreng2_spritesheet.svg);
+    width: 28vw;
+    height: 42.00vw;
+    background-size: 400%;
+}
+
+/******START POSE******/
+
+.dreng2_start_pose {
+    background-position: 0 0;
+}
+
+
+/******SLET BILLEDE POSE******/
+
+.dreng2_slet {
+    background-position: 0 32%;
+}
+
+
+
+/******LAUGHCYCLE******/
+
+.dreng2_laughcycle {
+    animation-name: dreng2_laughcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng2_laughcycle_kf {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: -400% 100%;
+    }
+}
+
+/******WALKCYCLE******/
+
+.dreng2_walkcycle {
+    animation-name: dreng2_walkcycle_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
+}
+
+@keyframes dreng2_walkcycle_kf {
+    0% {
+        background-position: 0% 65%;
+    }
+    100% {
+        background-position: -400% 65%;
+    }
+}
+
+/************************************DRENG2 SPRITE SLUT************************************/
+
+/************************************DRENG2 CONTAINER************************************/
+
+#dreng2_container {
+    position: absolute;
+    overflow: hidden;
+    top: 25%;
+    left: 0;
+}
+
+/************************************DRENG2 CONTAINER SLUT************************************/
