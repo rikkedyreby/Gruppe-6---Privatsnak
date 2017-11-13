@@ -415,13 +415,13 @@
 </g>
 <g id="walk_x5F_3">
 	<g>
-		
+
 			<use xlink:href="#walk_x5F_1_1_"  width="100" height="150" x="-50" y="-75" transform="matrix(1 0 0 -1 50 75)" style="overflow:visible;"/>
-		
+
 			<use xlink:href="#walk_x5F_2_1_"  width="100" height="150" x="-50" y="-75" transform="matrix(1 0 0 -1 150 75)" style="overflow:visible;"/>
-		
+
 			<use xlink:href="#walk_x5F_3_1_"  width="100" height="150" x="-50" y="-75" transform="matrix(1 0 0 -1 250 75)" style="overflow:visible;"/>
-		
+
 			<use xlink:href="#walk_x5F_4_1_"  width="100" height="150" x="-50" y="-75" transform="matrix(1 0 0 -1 350 75)" style="overflow:visible;"/>
 	</g>
 </g>
