@@ -28,7 +28,6 @@ body {
     position: absolute;
 }
 
-
 #forgrund {
     width: 100%;
     height: 100%;
@@ -38,7 +37,9 @@ body {
     position: absolute;
 }
 
+
 /************************************SCENE SLUT************************************/
+
 
 /************************************BRUSER************************************/
 
@@ -50,8 +51,6 @@ body {
 .dryp_pose {
     top: 14%;
     left: 0%;
-
-
 }
 
 #bruser_sprite {
@@ -59,7 +58,6 @@ body {
     width: 31.33vw;
     height: 47.00vw;
     background-size: 1600%;
-
 }
 
 .bruser_dryp {
@@ -78,22 +76,26 @@ body {
     }
 }
 
+
 /************************************BRUSER SLUT************************************/
+
 
 /************************************OSKAR SPRITE************************************/
 
 #oskar_sprite {
-    background-image:url(media/oskar_asset_og_spritesheet+haandklaede_af+snakker+griner.svg);
+    background-image: url(media/oskar_asset_og_spritesheet+haandklaede_af+snakker+griner.svg);
     width: 26.66vw;
     height: 40.00vw;
     background-size: 2100%;
 }
 
-/******STANDARD******/
 
-.oskar_standard {
+/******AFSLAPPET******/
+
+.oskar_afslappet {
     background-position: 0 0;
 }
+
 
 /******WALKCYCLE******/
 
@@ -113,13 +115,15 @@ body {
     }
 }
 
+
 /******HÅNDKLÆDE NED******/
 
 .oskar_ned {
     animation-name: oskar_ned_kf;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(6);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(5);
+    animation-fill-mode: both;
 }
 
 @keyframes oskar_ned_kf {
@@ -127,17 +131,20 @@ body {
         background-position: 0% 40%;
     }
     100% {
-        background-position: -600% 40%;
+        background-position: -500% 40%;
     }
 }
+
 
 /******HÅNDKLÆDE OP******/
 
 .oskar_up {
     animation-name: oskar_up_kf;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(21);
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(20);
+    animation-fill-mode: both;
+    animation-delay: 1s;
 }
 
 @keyframes oskar_up_kf {
@@ -145,9 +152,15 @@ body {
         background-position: 0% 100%;
     }
     100% {
-        background-position: -2100% 100%;
+        background-position: -2000% 100%;
     }
 }
+
+.oskar_valg {
+    background-position: -2000% 100%;
+    transform: scaleX(-1);
+}
+
 
 /******SNAK******/
 
@@ -167,6 +180,7 @@ body {
     }
 }
 
+
 /******GRIN******/
 
 .oskar_grin {
@@ -185,7 +199,9 @@ body {
     }
 }
 
+
 /************************************OSKAR SPRITE SLUT************************************/
+
 
 /************************************OSKAR CONTAINER************************************/
 
@@ -194,11 +210,12 @@ body {
     overflow: hidden;
 }
 
+
 /******POSE******/
 
-.pose {
-    top: 25%;
-    left: 50%;
+.oskar_end_pose {
+    top: 30%;
+    left: 45%;
 }
 
 
@@ -207,7 +224,7 @@ body {
 .move_right {
     animation-name: move_right_kf;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes move_right_kf {
@@ -215,17 +232,17 @@ body {
         top: 28%;
         left: 5%;
         transform: scale(.89)
-
     }
     100% {
         top: 30%;
-        left: 35%;
+        left: 45%;
         transform: scale(1)
     }
 }
 
 
 /************************************OSKAR CONTAINER SLUT************************************/
+
 
 /************************************DRENG1 SPRITE************************************/
 
@@ -235,6 +252,7 @@ body {
     height: 40.00vw;
     background-size: 900%;
 }
+
 
 /******START POSE******/
 
@@ -248,7 +266,6 @@ body {
 .dreng1_slet {
     background-position: 0 100%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -270,6 +287,7 @@ body {
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng1_walkcycle {
@@ -289,12 +307,13 @@ body {
     }
 }
 
+
 /******PULL******/
 
 .dreng1_pull {
     animation-name: dreng1_pull_kf;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     animation-timing-function: steps(9);
     animation-fill-mode: both;
 }
@@ -308,7 +327,9 @@ body {
     }
 }
 
+
 /************************************DRENG1 SPRITE SLUT************************************/
+
 
 /************************************DRENG1 CONTAINER************************************/
 
@@ -317,23 +338,46 @@ body {
     overflow: hidden;
 }
 
-
 .dreng1_start_pose {
-    top: 22%;
-    left: 15%
+    top: 30%;
+    left: 15%;
 }
+
+
+/******TIL OSKAR******/
 
 .dreng1_oskar {
-    top: 22%;
-    left: 40%;
+    animation-name: dreng1_oskar_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
+
+@keyframes dreng1_oskar_kf {
+    0% {
+        top: 30%;
+        left: 25%;
+    }
+    100% {
+        top: 28%;
+        left: 35%;
+    }
+}
+
+
+/******STAA OSKAR******/
+
+.dreng1_staa_oskar {
+    top: 28%;
+    left: 35%;
+}
+
 
 /******MOVE RIGHT******/
 
 .dreng1_move_right {
     animation-name: dreng1_move_right_kf;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes dreng1_move_right_kf {
@@ -341,8 +385,6 @@ body {
         top: 30%;
         left: -20%;
         transform: scale(0.89)
-
-
     }
     100% {
         top: 30%;
@@ -351,7 +393,31 @@ body {
     }
 }
 
+
+/******MOVE LEFT******/
+
+.dreng1_move_left {
+    animation-name: dreng1_move_left_kf;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes dreng1_move_left_kf {
+    0% {
+        top: 28%;
+        left: 35%;
+        transform: scaleX(-1);
+    }
+    100% {
+        top: 30%;
+        left: 15%;
+        transform: scaleX(-1);
+    }
+}
+
+
 /************************************DRENG1 CONTAINER SLUT************************************/
+
 
 /************************************DRENG2 SPRITE************************************/
 
@@ -361,6 +427,7 @@ body {
     height: 40.00vw;
     background-size: 400%;
 }
+
 
 /******START POSE******/
 
@@ -374,7 +441,6 @@ body {
 .dreng2_slet {
     background-position: 0 32%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -396,6 +462,7 @@ body {
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng2_walkcycle {
@@ -415,7 +482,9 @@ body {
     }
 }
 
+
 /************************************DRENG2 SPRITE SLUT************************************/
+
 
 /************************************DRENG2 CONTAINER************************************/
 
@@ -428,8 +497,9 @@ body {
 
 .dreng2_move_right {
     animation-name: dreng2_move_right_kf;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 @keyframes dreng2_move_right_kf {
@@ -437,8 +507,6 @@ body {
         top: 30%;
         left: -20%;
         transform: scale(0.89)
-
-
     }
     100% {
         top: 30%;
@@ -447,45 +515,91 @@ body {
     }
 }
 
+
 /************************************DRENG2 CONTAINER SLUT************************************/
 
+
 /************************************HÅND************************************/
-/*
+
 #haand_container {
     position: absolute;
     overflow: hidden;
 }
 
-.haand_start_pose {
-    top: 14%;
-    left: -100%;
-
-
-}
-
 .haand_ind_pose {
     top: 25%;
     left: 2%;
-
-
 }
 
 .haand_billede_pose {
-    top: 25%;
-    left: 25%;
-
-
+    animation-name: haand_billede_pose_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
+@keyframes haand_billede_pose_kf {
+    0% {
+        top: 25%;
+        left: 2%;
+    }
+    100% {
+        top: 22%;
+        left: 22%;
+    }
+}
+
+.haand_tilbage {
+    animation-name: haand_tilbage_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes haand_tilbage_kf {
+    0% {
+        top: 22%;
+        left: 22%;
+    }
+    100% {
+        top: 25%;
+        left: 2%;
+    }
+}
+
+.haand_start_pose {
+    top: 14%;
+    left: -100%;
+}
+
+.haand_enter {
+    animation-name: haand_enter_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes haand_enter_kf {
+    0% {
+        top: 14%;
+        left: -100%;
+    }
+    100% {
+        top: 25%;
+        left: 2%;
+    }
+}
+
+
+/***SPRITE***/
+
 #haand_sprite {
-    background-image:url(media/haand_tlf_asset_og_spritesheet-1111-01-01.svg);
+    background-image: url(media/haand_tlf_asset_og_spritesheet-1111-01-01.svg);
     width: 53vw;
     height: 55vw;
     background-size: 1100%;
-
 }
 
-.haand_klar {
+.haand_rolig {
     background-position: 0% 0%;
 }
 
@@ -494,8 +608,8 @@ body {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: steps(11);
-    animation-direction:alternate-reverse;
-
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
 }
 
 @keyframes haand_tryk_kf {
@@ -507,4 +621,156 @@ body {
     }
 }
 
+
 /************************************HÅND SLUT************************************/
+
+
+/************************************INDHOLD************************************/
+
+
+/*
+#indhold_container {
+    position: absolute;
+    width: 17.5vw;
+    height: 24vw;
+    top: 42%;
+    left: 30.29%;
+    transform:rotateZ(2.8deg);
+    background-color: black;
+}
+
+.pulse {
+
+    animation: pulse_kf 0.5s infinite alternate linear;
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+#billede_1 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/1.png);
+    position: absolute;
+}
+
+#billede_2 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/2.png);
+    position: absolute;
+}
+
+#billede_3 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/3.png);
+    position: absolute;
+}
+
+#billede_4 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/4.png);
+    position: absolute;
+}
+
+#billede_5 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/5.png);
+    position: absolute;
+}
+
+#billede_6 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/6.png);
+    position: absolute;
+}
+
+#billede_7 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/7.png);
+    position: absolute;
+}
+
+#billede_8 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/8.png);
+    position: absolute;
+}
+
+#billede_9 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/9.png);
+    position: absolute;
+}
+
+.pos1 {
+    top: 10%;
+    left: 0%;
+}
+
+.pos2 {
+    top: 10%;
+    left: 33%;
+}
+
+.pos3 {
+    top: 10%;
+    left: 66%;
+}
+
+.pos4 {
+    top: 37%;
+    left: 0%;
+}
+
+.pos5 {
+    top: 37%;
+    left: 33%;
+}
+
+.pos6 {
+    top: 37%;
+    left:  66%;
+}
+
+.pos7 {
+    top: 65%;
+    left: 0%;
+}
+
+.pos8 {
+    top: 65%;
+    left: 33%;
+}
+
+.pos9 {
+    top: 65%;
+    left: 66%;
+}
+
+
+
+/************************************INDHOLD SLUT************************************/
