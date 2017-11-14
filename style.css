@@ -28,7 +28,6 @@ body {
     position: absolute;
 }
 
-
 #forgrund {
     width: 100%;
     height: 100%;
@@ -38,6 +37,10 @@ body {
     position: absolute;
 }
 
+<<<<<<< HEAD
+
+/************************************SCENE SLUT************************************/
+=======
 /************************************SCENE SLUT************************************/
 
 #valg1_container {
@@ -55,6 +58,7 @@ body {
     left: 68vw;
     position: absolute;
 }
+>>>>>>> origin/master
 
 #valg1 {
   display: inline-block;
@@ -111,8 +115,6 @@ transform: translateY(4px);}
 .dryp_pose {
     top: 14%;
     left: 0%;
-
-
 }
 
 #bruser_sprite {
@@ -120,7 +122,6 @@ transform: translateY(4px);}
     width: 31.33vw;
     height: 47.00vw;
     background-size: 1600%;
-
 }
 
 .bruser_dryp {
@@ -139,7 +140,9 @@ transform: translateY(4px);}
     }
 }
 
+
 /************************************BRUSER SLUT************************************/
+
 
 /************************************OSKAR SPRITE************************************/
 
@@ -150,11 +153,13 @@ transform: translateY(4px);}
     background-size: 2100%;
 }
 
+
 /******AFSLAPPET******/
 
 .oskar_afslappet {
     background-position: 0 0;
 }
+
 
 /******WALKCYCLE******/
 
@@ -174,6 +179,7 @@ transform: translateY(4px);}
     }
 }
 
+
 /******HÅNDKLÆDE NED******/
 
 .oskar_ned {
@@ -192,6 +198,7 @@ transform: translateY(4px);}
         background-position: -500% 40%;
     }
 }
+
 
 /******HÅNDKLÆDE OP******/
 
@@ -213,11 +220,11 @@ transform: translateY(4px);}
     }
 }
 
-
 .oskar_valg {
     background-position: -2000% 100%;
     transform: scaleX(-1);
 }
+
 
 /******SNAK******/
 
@@ -237,6 +244,7 @@ transform: translateY(4px);}
     }
 }
 
+
 /******GRIN******/
 
 .oskar_grin {
@@ -255,7 +263,9 @@ transform: translateY(4px);}
     }
 }
 
+
 /************************************OSKAR SPRITE SLUT************************************/
+
 
 /************************************OSKAR CONTAINER************************************/
 
@@ -263,6 +273,7 @@ transform: translateY(4px);}
     position: absolute;
     overflow: hidden;
 }
+
 
 /******POSE******/
 
@@ -296,6 +307,7 @@ transform: translateY(4px);}
 
 /************************************OSKAR CONTAINER SLUT************************************/
 
+
 /************************************DRENG1 SPRITE************************************/
 
 #dreng1_sprite {
@@ -304,6 +316,7 @@ transform: translateY(4px);}
     height: 40.00vw;
     background-size: 900%;
 }
+
 
 /******START POSE******/
 
@@ -317,7 +330,6 @@ transform: translateY(4px);}
 .dreng1_slet {
     background-position: 0 100%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -339,6 +351,7 @@ transform: translateY(4px);}
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng1_walkcycle {
@@ -357,6 +370,7 @@ transform: translateY(4px);}
         background-position: -400% 25%;
     }
 }
+
 
 /******PULL******/
 
@@ -377,7 +391,9 @@ transform: translateY(4px);}
     }
 }
 
+
 /************************************DRENG1 SPRITE SLUT************************************/
+
 
 /************************************DRENG1 CONTAINER************************************/
 
@@ -386,9 +402,8 @@ transform: translateY(4px);}
     overflow: hidden;
 }
 
-
 .dreng1_start_pose {
-  top: 30%;
+    top: 30%;
     left: 15%;
 }
 
@@ -412,12 +427,14 @@ transform: translateY(4px);}
     }
 }
 
+
 /******STAA OSKAR******/
 
 .dreng1_staa_oskar {
     top: 28%;
     left: 35%;
 }
+
 
 /******MOVE RIGHT******/
 
@@ -440,6 +457,7 @@ transform: translateY(4px);}
     }
 }
 
+
 /******MOVE LEFT******/
 
 .dreng1_move_left {
@@ -453,9 +471,6 @@ transform: translateY(4px);}
         top: 28%;
         left: 35%;
         transform: scaleX(-1);
-
-
-
     }
     100% {
         top: 30%;
@@ -467,6 +482,7 @@ transform: translateY(4px);}
 
 /************************************DRENG1 CONTAINER SLUT************************************/
 
+
 /************************************DRENG2 SPRITE************************************/
 
 #dreng2_sprite {
@@ -475,6 +491,7 @@ transform: translateY(4px);}
     height: 40.00vw;
     background-size: 400%;
 }
+
 
 /******START POSE******/
 
@@ -488,7 +505,6 @@ transform: translateY(4px);}
 .dreng2_slet {
     background-position: 0 32%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -510,6 +526,7 @@ transform: translateY(4px);}
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng2_walkcycle {
@@ -530,8 +547,8 @@ transform: translateY(4px);}
 }
 
 
-
 /************************************DRENG2 SPRITE SLUT************************************/
+
 
 /************************************DRENG2 CONTAINER************************************/
 
@@ -565,6 +582,7 @@ transform: translateY(4px);}
 
 /************************************DRENG2 CONTAINER SLUT************************************/
 
+
 /************************************HÅND************************************/
 
 #haand_container {
@@ -572,13 +590,9 @@ transform: translateY(4px);}
     overflow: hidden;
 }
 
-
-
 .haand_ind_pose {
     top: 25%;
     left: 2%;
-
-
 }
 
 .haand_billede_pose {
@@ -596,7 +610,6 @@ transform: translateY(4px);}
     100% {
         top: 22%;
         left: 22%;
-
     }
 }
 
@@ -609,9 +622,8 @@ transform: translateY(4px);}
 
 @keyframes haand_tilbage_kf {
     0% {
-          top: 22%;
+        top: 22%;
         left: 22%;
-
     }
     100% {
         top: 25%;
@@ -619,12 +631,9 @@ transform: translateY(4px);}
     }
 }
 
-
 .haand_start_pose {
     top: 14%;
     left: -100%;
-
-
 }
 
 .haand_enter {
@@ -645,7 +654,6 @@ transform: translateY(4px);}
 }
 
 
-
 /***SPRITE***/
 
 #haand_sprite {
@@ -653,15 +661,11 @@ transform: translateY(4px);}
     width: 53vw;
     height: 55vw;
     background-size: 1100%;
-
 }
 
 .haand_rolig {
     background-position: 0% 0%;
 }
-
-
-
 
 .haand_tryk {
     animation-name: haand_tryk_kf;
@@ -670,7 +674,6 @@ transform: translateY(4px);}
     animation-timing-function: steps(11);
     animation-direction: alternate-reverse;
     animation-delay: 1s;
-
 }
 
 @keyframes haand_tryk_kf {
@@ -682,9 +685,12 @@ transform: translateY(4px);}
     }
 }
 
+
 /************************************HÅND SLUT************************************/
 
+
 /************************************INDHOLD************************************/
+
 
 /*
 #indhold_container {
