@@ -37,10 +37,74 @@ body {
     position: absolute;
 }
 
+<<<<<<< HEAD
 
 /************************************SCENE SLUT************************************/
+=======
+/************************************SCENE SLUT************************************/
+
+#valg1_container {
+    width: auto;
+    height: auto;
+    left:68vw;
+    top: 32vw;
+    position: absolute;
+}
+
+#valg2_container {
+    width: auto;
+    height: auto;
+    top: 20vw;
+    left: 68vw;
+    position: absolute;
+}
+>>>>>>> origin/master
+
+#valg1 {
+  display: inline-block;
+  padding: 20px 8px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #ff9219;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px rgb(116, 82, 43);
+    font-weight: 500;
+}
+
+#valg1:hover {background-color: #d17816}
+
+#valg1:active {
+  background-color: #af630e;
+  box-shadow: 0 5px rgb(116, 82, 43);
+transform: translateY(4px);}
 
 
+#valg2 {
+  display: inline-block;
+  padding: 33px 12px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #5ecde8;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #36707e;
+}
+
+#valg2:hover {background-color: #44a7bf}
+
+#valg2:active {
+  background-color: #39899d;
+  box-shadow: 0 5px #36707e;
+    transform: translateY(4px);}
 /************************************BRUSER************************************/
 
 #bruser_container {
