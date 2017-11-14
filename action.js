@@ -13,7 +13,7 @@ function startAnim() {
 function vennerKommerInd() {
     console.log("vennerne kommer ind");
     $("#oskar_sprite").remove("oskar_walkcycle");
-    $("#oskar_container").addClass("pose");
+    $("#oskar_container").addClass("oskar_standard");
     $("#dreng1_container").addClass("dreng1_start_pose");
     $("#dreng1_sprite").addClass("dreng1_walkcycle");
     $("#dreng2_container").addClass("dreng2_start_pose");
@@ -25,4 +25,3 @@ function ven1Gaar() {
     console.log("ven går til oskar");
     $("#dreng2_sprite").remove("dreng2_walkcycle");
     $("#dreng1_container").remove("dreng1_start_pose");
-    $("#dreng1_sprite").addClass("dreng1_move_right");
