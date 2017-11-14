@@ -40,6 +40,21 @@ body {
 
 /************************************SCENE SLUT************************************/
 
+#valg1 {
+    background-image:url(valg1-01.svg);
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+}
+
+#valg2 {
+    background-image;
+    position: absolute;
+    width: 20vw;
+    height: 10vw;
+}
+
+
 /************************************BRUSER************************************/
 
 #bruser_container {
