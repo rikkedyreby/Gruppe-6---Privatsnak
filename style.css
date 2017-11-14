@@ -89,9 +89,9 @@ body {
     background-size: 2100%;
 }
 
-/******STANDARD******/
+/******AFSLAPPET******/
 
-.oskar_standard {
+.oskar_afslappet {
     background-position: 0 0;
 }
 
@@ -196,7 +196,7 @@ body {
 
 /******POSE******/
 
-.pose {
+.oskar_end_pose {
     top: 25%;
     left: 50%;
 }
@@ -219,7 +219,7 @@ body {
     }
     100% {
         top: 30%;
-        left: 35%;
+        left: 45%;
         transform: scale(1)
     }
 }
@@ -324,7 +324,7 @@ body {
 }
 
 .dreng1_oskar {
-    top: 22%;
+    top: 24%;
     left: 40%;
 }
 
@@ -450,18 +450,13 @@ body {
 /************************************DRENG2 CONTAINER SLUT************************************/
 
 /************************************HÅND************************************/
-/*
+
 #haand_container {
     position: absolute;
     overflow: hidden;
 }
 
-.haand_start_pose {
-    top: 14%;
-    left: -100%;
 
-
-}
 
 .haand_ind_pose {
     top: 25%;
@@ -471,11 +466,21 @@ body {
 }
 
 .haand_billede_pose {
-    top: 25%;
+    top: 22%;
     left: 25%;
 
 
 }
+
+.haand_start_pose {
+    top: 14%;
+    left: -100%;
+
+
+}
+
+
+/***SPRITE***/
 
 #haand_sprite {
     background-image:url(media/haand_tlf_asset_og_spritesheet-1111-01-01.svg);
@@ -485,9 +490,12 @@ body {
 
 }
 
-.haand_klar {
+.haand_ude {
     background-position: 0% 0%;
 }
+
+
+
 
 .haand_tryk {
     animation-name: haand_tryk_kf;
@@ -508,3 +516,155 @@ body {
 }
 
 /************************************HÅND SLUT************************************/
+
+/************************************INDHOLD************************************/
+/*
+#indhold_container {
+    position: absolute;
+    width: 17.5vw;
+    height: 24vw;
+    top: 42%;
+    left: 30.29%;
+    transform:rotateZ(2.8deg);
+    background-color: black;
+}
+
+.pulse {
+
+    animation: pulse_kf 0.5s infinite alternate linear;
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+#billede_1 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/1.png);
+    position: absolute;
+}
+
+#billede_2 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/2.png);
+    position: absolute;
+}
+
+#billede_3 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/3.png);
+    position: absolute;
+}
+
+#billede_4 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/4.png);
+    position: absolute;
+}
+
+#billede_5 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/5.png);
+    position: absolute;
+}
+
+#billede_6 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/6.png);
+    position: absolute;
+}
+
+#billede_7 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/7.png);
+    position: absolute;
+}
+
+#billede_8 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/8.png);
+    position: absolute;
+}
+
+#billede_9 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(nudes/9.png);
+    position: absolute;
+}
+
+.pos1 {
+    top: 10%;
+    left: 0%;
+}
+
+.pos2 {
+    top: 10%;
+    left: 33%;
+}
+
+.pos3 {
+    top: 10%;
+    left: 66%;
+}
+
+.pos4 {
+    top: 37%;
+    left: 0%;
+}
+
+.pos5 {
+    top: 37%;
+    left: 33%;
+}
+
+.pos6 {
+    top: 37%;
+    left:  66%;
+}
+
+.pos7 {
+    top: 65%;
+    left: 0%;
+}
+
+.pos8 {
+    top: 65%;
+    left: 33%;
+}
+
+.pos9 {
+    top: 65%;
+    left: 66%;
+}
+
+
+
+/************************************INDHOLD SLUT************************************/
+
+
+
+
