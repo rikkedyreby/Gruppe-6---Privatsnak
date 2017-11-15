@@ -96,10 +96,10 @@ function oskarHiverHaandklaedetOp() {
 
 function branch() {
     console.log("branch");
-    $("#dreng1_container").off("animationend", branch);
+    $("#oskar_sprite").off("animationend", branch);
     $("#oskar_sprite").removeClass("oskar_up");
     $("#oskar_sprite").addClass("oskar_valg");
-    $("#oskar_sprite").removeClass("move_right");
+    $("#oskar_container").removeClass("move_right");
     $("#oskar_sprite").removeClass("oskar_ned");
     $("#haand_sprite").removeClass("haand_tryk");
     $("#haand_container").removeClass("haand_billede_pose");
@@ -110,6 +110,7 @@ function branch() {
 
 function fork() {
     console.log("fork");
+    $("#oskar_sprite").off("animationend", branch);
 
 
     $("#indhold_container").show();
@@ -199,12 +200,13 @@ function startEnTimer() {
     $("#valg1").off("click", oskarOvertaler);
     $("#valg2").off("click", oskarGriner);
 
+    $("#oskar_sprite").removeClass("oskar_snak");
+    $("#oskar_sprite").addClass("oskar_valg");
+
     $("#text_container").show();
     $("#text_container").addClass("pulse2");
 
-
     $("#haand_container").removeClass("foran_indhold");
-
     $("#text_container").on("animationend",showBilleder);
 }
 
@@ -215,20 +217,27 @@ function showBilleder (){
     $("#text_container").hide();
 
 
-    $("#nudes").addClass("pulse");
-    setTimeout(faerdig,50000); //kører functionen efter 5000 ms, start på puls//
+    $(".tryk").addClass("pulse");
 
-    $("#nude").on("click",nudeKlik);
+    setTimeout(faerdig,50000);
+
+    $(".tryk").on("click",nudeKlik);
 }
 
 function nudeKlik() {
     console.log("nudeKlik");
-    $("#nude").off("click",nudeKlik);
+    $(".tryk").off("click",nudeKlik);
+
+    $(".tryk").removeClass("pulse");
 
     $(this).hide();
     antalNudes++;
 
-    $("#nude").on("animationend", faerdig);
+    $("#oskar_sprite").removeClass("oskar_valg");
+    $("#oskar_sprite").addClass("oskar_slet_nude");
+
+
+    $("#oskar_sprite").on("animationend", faerdig);
 }
 
 function faerdig() {
@@ -243,7 +252,7 @@ function faerdig() {
         sletNudes();
     } else {
         console.log("Under 5");
-        delNudes();
+        showBilleder();
     }
 }
 
