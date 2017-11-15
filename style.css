@@ -177,7 +177,7 @@ body {
 /************************************OSKAR SPRITE************************************/
 
 #oskar_sprite {
-    background-image: url(media/oskar_spritesheet_endelig.svg);
+    background-image:url(media/oskar_spritesheet_endelig.svg);
     width: 26.66vw;
     height: 40.00vw;
     background-size: 2100%;

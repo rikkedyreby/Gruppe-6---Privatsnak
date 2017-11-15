@@ -210,15 +210,16 @@ function startEnTimer() {
 
 
 function showBilleder (){
+    console.log("showBilleder");
+    $("#text_container").off("animationend",showBilleder);
     $("#text_container").hide();
 
-    $("#nude").addClass("pulse");
+
+    $("#nudes").addClass("pulse");
     setTimeout(faerdig,50000); //kører functionen efter 5000 ms, start på puls//
 
-    $("#nude").on("click",nudeKlik); // kører denne funktion hvis du når at trykke på knappen inden 5000ms//
+    $("#nude").on("click",nudeKlik);
 }
-
-
 
 function nudeKlik() {
     console.log("nudeKlik");
