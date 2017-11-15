@@ -10,6 +10,115 @@ body {
     overflow: hidden;
 }
 
+#startskaerm {
+    width: 100%;
+    height: 100%;
+    background-image:url(start_skaerm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#slutskaerm{
+    width: 100%;
+    height: 100%;
+    background-image:url(slut_skaerm_final-01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    animation-delay: 2s;
+
+    animation-name: slutskaerm_kf;
+    animation-delay: 2s;
+}
+
+
+    @keyframes slutskaerm_kf {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+
+#link {
+    background-image:url(PrivatSnak_logo.svg);
+    width: 30vw;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#link_container {
+    left: 59vw;
+    top: 28vw;
+    position: absolute;
+    z-index: 10;
+}
+
+#link:hover {
+   transform: scale(1.1);
+}
+
+#link2 {
+    background-image:url(PrivatSnak_logo.svg);
+    width: 30vw;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#link2:hover {
+   transform: scale(1.1);
+}
+
+#link2_container {
+    left: 37vw;
+    top: 0vw;
+    position: absolute;
+    z-index: 10;
+}
+
+#start {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    padding: 20px 80px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #ff9219;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgb(116, 82, 43);
+    font-weight: 500;
+}
+
+#start:hover {
+    background-color: #d17816
+}
+
+#start:active {
+    background-color: #af630e;
+    box-shadow: 0 5px rgb(116, 82, 43);
+    transform: translateY(4px);
+}
+
+#start_container {
+    width: auto;
+    height: auto;
+    left:26vw;
+    top: 20vw;
+    position: absolute;
+    z-index: 10;
+}
+
 #baggrund {
     width: 100%;
     height: 100%;
@@ -222,10 +331,10 @@ body {
 
 @keyframes oskar_ned_kf {
     0% {
-        background-position: 0% 34%;
+        background-position: 0% 33.5%;
     }
     100% {
-        background-position: -500% 34%;
+        background-position: -500% 33.5%;
     }
 }
 
@@ -253,7 +362,7 @@ body {
 
 .oskar_slet_nude {
     animation-name: oskar_slet_nude_kf;
-    animation-duration: 0.1s;
+    animation-duration: 0.01s;
     animation-iteration-count: 1;
 }
 
@@ -300,9 +409,9 @@ body {
 
 .oskar_grin {
     animation-name: oskar_grin_kf;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
-    animation-timing-function: steps(4);
+    animation-timing-function: steps(5);
     animation-fill-mode: both;
 }
 
@@ -312,7 +421,7 @@ body {
         transform: scaleX(-1);
     }
     100% {
-        background-position: -400% 100%;
+        background-position: -500% 100%;
         transform: scaleX(-1);
     }
 }
@@ -320,10 +429,23 @@ body {
 /******lettet******/
 
 .oskar_lettet {
-    background-position: -400% 100%;
-    transform: scaleX(-1);
+    animation-name: oskar_lettet_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
 }
 
+@keyframes oskar_lettet_kf {
+    0% {
+        background-position: -400% 100%;
+        transform: scaleX(-1);
+    }
+    100% {
+        background-position: -400% 100%;
+        transform: scaleX(-1);
+    }
+}
 /************************************OSKAR SPRITE SLUT************************************/
 
 /************************************OSKAR CONTAINER************************************/
@@ -749,11 +871,11 @@ body {
 
 .haand_tryk_2 {
     animation-name: haand_tryk_2_kf;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: steps(3);
     animation-direction: alternate-reverse;
-    animation-delay: 1s;
+    animation-delay: 0.2s;
 }
 
 @keyframes haand_tryk_2_kf {
@@ -881,12 +1003,25 @@ body {
     position: absolute;
 }
 
-.billede_10 {
+#billede_10 {
     width: 5vw;
     height: 5vw;
     background-size: cover;
     background-image: url(media/delete.jpg);
     position: absolute;
+}
+
+#billede_11 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(Asset%201.svg);
+    position: absolute;
+}
+
+.pos01 {
+    top: 37%;
+    left: 34%;
 }
 
 .pos1 {

@@ -1,13 +1,44 @@
 var erDerKlikketPaaAlleKnapperFlag = false;
 var antalNudes = 0;
 
-$(window).on("load", startAnim);
+$(window).on("load",trykStart);
+
+function trykStart (){
+    console.log("trykStart");
+    $("#startskaerm").addClass("show");
+
+    $("#forgrund").hide();
+    $("#mellemgrund").hide();
+    $("#baggrund").hide();
+    $("#bruser_container").hide();
+    $("#dreng1_container").hide();
+    $("#dreng2_container").hide();
+    $("#oskar_container").hide();
+    $("#haand_container").hide();
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#indhold_container").hide();
+    $("#text_container").hide();
+    $("#slutskaerm").hide();
+    $("#link2_container").hide();
+
+
+    $("#start").on("click", startAnim);
+}
+
+
 function startAnim() {
     console.log("animationen starter");
     $("#bruseren_drypper")[0].play();
     $("#bruseren_drypper").animate({
         volume: .7
     }, 30000);
+
+    $("#start_container").hide();
+    $("#link_container").hide();
+     $("#link2_container").hide();
+    $("#startskaerm").hide();
+
     $("#bruseren_drypper")[0].volume = 0.1;
     $("#bruseren_drypper")[0].loop = true;
     $("#dreng1_container").hide();
@@ -17,7 +48,12 @@ function startAnim() {
     $("#valg2_container").hide();
     $("#indhold_container").hide();
     $("#billede_10").hide();
-
+    $("#billede_11").hide();
+    $("#forgrund").show();
+    $("#mellemgrund").show();
+    $("#baggrund").show();
+    $("#bruser_container").show();
+    $("#oskar_container").show();
     $("#text_container").hide();
 
     $("#bruser_container").addClass("dryp_pose");
@@ -159,11 +195,12 @@ function oskarOvertaler() {
     $("#oskar_sprite").addClass("oskar_snak");
     $("#dreng1_sprite").removeClass("dreng1_laughcycle");
     $("#dreng2_sprite").removeClass("dreng2_laughcycle");
-    $("#oskar_sprite").on("animationend",startEnTimer);
+    $("#oskar_sprite").on("animationend",randomValg);
 }
-/*
+
 function randomValg(){
      console.log("randomValg");
+    $("#oskar_sprite").off("animationend",randomValg);
 
     $("#monster_sprite").removeClass("monster_walkcycle");
     $("#monster_sprite").addClass("straight2");
@@ -176,12 +213,9 @@ function randomValg(){
         startEnTimer();
     }
 
-}*/
+}
 /******************VEN OVERTALT**********************/
 
-/*
-=======
->>>>>>> origin/master
 function venOvertalt() {
     console.log("venOvertalt");
     $("#overtal")[0].loop = false;
@@ -198,18 +232,10 @@ function slettet() {
     $("#lettet")[0].play();
     $("#oskar_sprite").addClass("oskar_lettet");
     $("#oskar_sprite").removeClass("oskar_valg");
-    $("#billede_1").hide();
-    $("#billede_2").hide();
-    $("#billede_3").hide();
-    $("#billede_4").hide();
-    $("#billede_5").hide();
-    $("#billede_6").hide();
-    $("#billede_7").hide();
-    $("#billede_8").hide();
-    $("#billede_9").hide();
+    $(".tryk").hide();
     $("#billede_10").show();
+    $("#oskar_sprite").on("animationend", godSlutning);
 }
-<<<<<<< HEAD
 
 /***TILFØJ SLUTNING****/
 
@@ -239,10 +265,13 @@ function showBilleder (){
     $("#text_container").off("animationend",showBilleder);
     $("#text_container").hide();
 
+    $("#oskar_sprite").addClass("oskar_valg");
+    $("#oskar_sprite").removeClass("oskar_slet_nude");
+
 
     $(".tryk").addClass("pulse");
 
-    setTimeout(faerdig,50000);
+    setTimeout(haandDeltTo, 5000);
 
     $(".tryk").on("click",nudeKlik);
 }
@@ -259,22 +288,22 @@ function nudeKlik() {
     $("#oskar_sprite").removeClass("oskar_valg");
     $("#oskar_sprite").addClass("oskar_slet_nude");
 
-
     $("#oskar_sprite").on("animationend", faerdig);
 }
 
 function faerdig() {
     console.log("faerdig");
-    $("#hundcontainer").off("animationend", faerdig);
+    $("#oskar_sprite").off("animationend", faerdig);
 
-    $("#hund").addClass("hundStartPic");
-    $("#hund").removeClass("spisGodbid");
+    $("#oskar_sprite").removeClass("oskar_valg");
+    $("#oskar_sprite").removeClass("oskar_slet_nude");
+
 
     if (antalNudes >= 9){
         console.log("Over 9");
         sletNudes();
     } else {
-        console.log("Under 5");
+        console.log("Under 9");
         showBilleder();
     }
 }
@@ -282,25 +311,44 @@ function faerdig() {
 
 function sletNudes() {
     console.log("sletNudes");
+$("#text_container").off("animationend",showBilleder);
+    $("#oskar_sprite").off("animationend",startEnTimer);
+
+    $("#oskar_sprite").off("animationend", faerdig);
+    $("#text_container").hide();
+    $("#billede_10").show();
+    $("#oskar_sprite").addClass("oskar_grin");
+
+    $("#oskar_sprite").on("animationend", godSlutning);
 }
 
-function delNudes() {
-    console.log("delNudes");
-}
 
-/****************TIDEN ER GÅET*******/
-/*
-function tidenErGaaet() {
-    $("#monster_container").off("click",nudeKlik);
-    console.log("tidenErGaaet");
+
+function timeOut() {
+    console.log("timeOut");
 
     if(erDerKlikketPaaAlleKnapperFlag==true) {
         sletNudes();
     } else {
-        delNudes();
+        haandDeltTo();
     }
+}
 
-}*/
+function haandDeltTo() {
+    console.log("haandDeltTo");
+    $("#oskarUsikker")[0].loop = false;
+    $("#klorHaar")[0].loop = false;
+
+    $("#billede_11").show();
+     $("#billede_10").hide();
+    $(".tryk").hide();
+
+    $("#haand_container").addClass("foran_indhold")
+    $("#oskar_sprite").off("animationend", haandDelt);
+    $("#haand_sprite").addClass("haand_tryk_2");
+    $("#haand_sprite").on("animationend", badSlutning);
+}
+
 
 /******************OSKAR GRINER**********************/
 function oskarGriner() {
@@ -326,8 +374,60 @@ function haandDelt() {
     console.log("haandDelt");
     $("#oskarUsikker")[0].loop = false;
     $("#klorHaar")[0].loop = false;
+    $("#billede_11").show();
+    $(".tryk").hide();
     $("#oskar_sprite").off("animationend", haandDelt);
+    $("#haand_sprite").removeClass("haand_rolig");
     $("#haand_sprite").addClass("haand_tryk_2");
+
+    $("#haand_sprite").on("animationend", badSlutning);
 }
 
 /***TILFØJ SLUTNING****/
+
+
+function godSlutning() {
+    console.log("godSlutning");
+    $("#oskar_sprite").off("animationend", godSlutning);
+    $("#forgrund").hide();
+    $("#mellemgrund").hide();
+    $("#baggrund").hide();
+    $("#bruser_container").hide();
+    $("#dreng1_container").hide();
+    $("#dreng2_container").hide();
+    $("#oskar_container").hide();
+    $("#haand_container").hide();
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#indhold_container").hide();
+    $("#text_container").hide();
+    $("#startskaerm").hide();
+
+    $("#slutskaerm").show();
+    $("#link2_container").show();
+
+}
+
+function badSlutning() {
+    console.log("badSlutning");
+    $("#oskar_sprite").off("animationend", badSlutning);
+    $("#forgrund").hide();
+    $("#mellemgrund").hide();
+    $("#baggrund").hide();
+    $("#bruser_container").hide();
+    $("#dreng1_container").hide();
+    $("#dreng2_container").hide();
+    $("#oskar_container").hide();
+    $("#haand_container").hide();
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#indhold_container").hide();
+    $("#text_container").hide();
+    $("#startskaerm").hide();
+
+    $("#slutskaerm").show();
+    $("#link2_container").show();
+
+}
+
+
