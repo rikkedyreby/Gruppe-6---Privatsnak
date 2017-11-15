@@ -286,6 +286,7 @@ function faerdig() {
 
 function sletNudes() {
     console.log("sletNudes");
+    $("#lettet")[0].play();
     $("#venteMusik")[0].loop = false;
     $("#text_container").off("animationend", showBilleder);
     $("#oskar_sprite").off("animationend", startEnTimer);
@@ -308,8 +309,9 @@ function timeOut() {
 
 function haandDeltTo() {
     console.log("haandDeltTo");
-    $("#venteMusik")[0].loop = false;
     $("#aaah")[0].play();
+    $("#aaah")[0].loop = true;
+    $("#venteMusik")[0].loop = false;
     $("#oskarUsikker")[0].loop = false;
     $("#klorHaar")[0].loop = false;
     $("#billede_11").show();
@@ -323,8 +325,6 @@ function haandDeltTo() {
 /******************OSKAR GRINER**********************/
 function oskarGriner() {
     console.log("oskarGriner");
-    $("#klorHaar")[0].play();
-    $("#klorHaar")[0].loop = true;
     $("#oskarUsikker")[0].play();
     $("#oskarUsikker").animate({
         volume: .7
@@ -342,9 +342,7 @@ function oskarGriner() {
 
 function haandDelt() {
     console.log("haandDelt");
-    $("#aaah")[0].play();
     $("#oskarUsikker")[0].loop = false;
-    $("#klorHaar")[0].loop = false;
     $("#billede_11").show();
     $(".tryk").hide();
     $("#oskar_sprite").off("animationend", haandDelt);
@@ -355,7 +353,6 @@ function haandDelt() {
 /***TILFØJ SLUTNING****/
 function godSlutning() {
     console.log("godSlutning");
-    $("#aaah")[0].loop = false;
     $("#oskar_sprite").off("animationend", godSlutning);
     $("#forgrund").hide();
     $("#mellemgrund").hide();
@@ -377,6 +374,7 @@ function godSlutning() {
 function badSlutning() {
     console.log("badSlutning");
     $("#venteMusik")[0].loop = false;
+    $("#aaah")[0].loop = false;
     $("#oskar_sprite").off("animationend", badSlutning);
     $("#forgrund").hide();
     $("#mellemgrund").hide();
