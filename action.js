@@ -1,3 +1,6 @@
+var erDerKlikketPaaAlleKnapperFlag = false;
+var klikTaeller = 0;
+
 $(window).on("load", startAnim);
 //cirkel er sprite//
 function startAnim() {
@@ -6,6 +9,12 @@ function startAnim() {
     $("#dreng1_container").hide();
     $("#dreng2_container").hide();
     $("#haand_container").hide();
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#indhold_container").hide();
+    $("#billede_10").hide();
+
+
     $("#bruser_container").addClass("dryp_pose");
     $("#bruser_sprite").addClass("bruser_dryp");
     $("#oskar_sprite").addClass("oskar_walkcycle");
@@ -94,23 +103,107 @@ function branch() {
     $("#haand_container").removeClass("haand_billede_pose");
     $("#haand_sprite").addClass("haand_rolig");
     $("#haand_container").addClass("haand_tilbage");
-    $("#oskar_sprite").on("animationend", fork);
+    $("#haand_container").on("animationend",fork);
 }
 
 function fork() {
     console.log("fork");
-    $("#dreng1_container").off("animationend", fork);
-    $("#text_container").show();
-    $("#valg1").show();
-    $("#valg2").show();
+
+
+    $("#indhold_container").show();
+    $("#haand_container").addClass("foran_indhold");
+
+    $("#valg1_container").show();
+    $("#valg2_container").show();
+
     $("#valg1").on("click", oskarOvertaler);
     $("#valg2").on("click", oskarGriner);
 }
 
 function oskarOvertaler() {
     console.log("oskarOvertaler");
+    $("#haand_container").off("animationend",fork);
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#valg1").off("click", oskarOvertaler);
+    $("#valg2").off("click", oskarGriner);
+
+
+    $("#oskar_sprite").removeClass("oskar_valg");
+    $("#oskar_sprite").addClass("oskar_snak");
+
+    $("#dreng1_sprite").removeClass("dreng1_laughcycle");
+    $("#dreng2_sprite").removeClass("dreng2_laughcycle");
+    $("#oskar_sprite").on("animationend",venOvertalt);
 }
+/*
+function randomValg(){
+     console.log("randomValg");
+
+    $("#monster_sprite").removeClass("monster_walkcycle");
+    $("#monster_sprite").addClass("straight2");
+
+    if (Math.random() >= 0.5){ //<-- fifty fifty//
+        console.log("True");
+        venOvertalt(); //<-- funktion navn, den hopper derved til den funktion//
+    } else {
+        console.log("False");
+        startEnTimer();
+    }
+
+}*/
+
+/******************VEN OVERTALT**********************/
+
+function venOvertalt() {
+    console.log("venOvertalt");
+    $("#haand_container").off("animationend",fork);
+    $("#oskar_sprite").off("animationend",venOvertalt);
+
+    $("#oskar_sprite").addClass("oskar_valg");
+    $("#oskar_sprite").removeClass("oskar_snak");
+
+    $("#haand_sprite").addClass("haand_tryk_2");
+    $("#haand_sprite").on("animationend", slettet);
+}
+
+function slettet() {
+    console.log("slettet");
+    $("#oskar_sprite").addClass("oskar_lettet");
+    $("#oskar_sprite").removeClass("oskar_valg");
+
+    $("#billede_1").hide();
+    $("#billede_2").hide();
+    $("#billede_3").hide();
+    $("#billede_4").hide();
+    $("#billede_5").hide();
+    $("#billede_6").hide();
+    $("#billede_7").hide();
+    $("#billede_8").hide();
+    $("#billede_9").hide();
+
+    $("#billede_10").show();
+}
+
+
+/******************OSKAR GRINER**********************/
 
 function oskarGriner() {
     console.log("oskarGriner");
+    $("#haand_container").off("animationend",fork);
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#valg1").off("click", oskarOvertaler);
+    $("#valg2").off("click", oskarGriner);
+    $("#oskar_sprite").addClass("oskar_grin");
+
+    $("#oskar_sprite").on("animationend",haandDelt);
+}
+
+function haandDelt() {
+    console.log("haandDelt");
+    $("#oskar_sprite").off("animationend",haandDelt);
+
+    $("#haand_sprite").addClass("haand_tryk_2");
+
 }
