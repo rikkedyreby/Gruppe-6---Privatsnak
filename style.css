@@ -28,7 +28,6 @@ body {
     position: absolute;
 }
 
-
 #forgrund {
     width: 100%;
     height: 100%;
@@ -40,20 +39,68 @@ body {
 
 /************************************SCENE SLUT************************************/
 
-#valg1 {
-    background-image:url(valg1-01.svg);
-    width: 20vw;
-    height: 10vw;
+#valg1_container {
+    width: auto;
+    height: auto;
+    left:68vw;
+    top: 32vw;
     position: absolute;
 }
+
+#valg2_container {
+    width: auto;
+    height: auto;
+    top: 20vw;
+    left: 68vw;
+    position: absolute;
+}
+
+
+#valg1 {
+  display: inline-block;
+  padding: 20px 8px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #ff9219;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px rgb(116, 82, 43);
+    font-weight: 500;
+}
+
+#valg1:hover {background-color: #d17816}
+
+#valg1:active {
+  background-color: #af630e;
+  box-shadow: 0 5px rgb(116, 82, 43);
+transform: translateY(4px);}
+
 
 #valg2 {
-    background-image;
-    position: absolute;
-    width: 20vw;
-    height: 10vw;
+  display: inline-block;
+  padding: 33px 12px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #5ecde8;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #36707e;
 }
 
+#valg2:hover {background-color: #44a7bf}
+
+#valg2:active {
+  background-color: #39899d;
+  box-shadow: 0 5px #36707e;
+    transform: translateY(4px);}
 
 /************************************BRUSER************************************/
 
@@ -65,8 +112,6 @@ body {
 .dryp_pose {
     top: 14%;
     left: 0%;
-
-
 }
 
 #bruser_sprite {
@@ -74,7 +119,6 @@ body {
     width: 31.33vw;
     height: 47.00vw;
     background-size: 1600%;
-
 }
 
 .bruser_dryp {
@@ -93,22 +137,26 @@ body {
     }
 }
 
+
 /************************************BRUSER SLUT************************************/
+
 
 /************************************OSKAR SPRITE************************************/
 
 #oskar_sprite {
-    background-image: url(media/oskar_asset_og_spritesheet+haandklaede_af+snakker+griner.svg);
+    background-image:url(media/oskar_spritesheet_endelig.svg);
     width: 26.66vw;
     height: 40.00vw;
     background-size: 2100%;
 }
+
 
 /******AFSLAPPET******/
 
 .oskar_afslappet {
     background-position: 0 0;
 }
+
 
 /******WALKCYCLE******/
 
@@ -121,12 +169,13 @@ body {
 
 @keyframes oskar_walkcycle_kf {
     0% {
-        background-position: 0% 20%;
+        background-position: 0% 16%;
     }
     100% {
-        background-position: -400% 20%;
+        background-position: -400% 16%;
     }
 }
+
 
 /******HÅNDKLÆDE NED******/
 
@@ -140,12 +189,13 @@ body {
 
 @keyframes oskar_ned_kf {
     0% {
-        background-position: 0% 40%;
+        background-position: 0% 34%;
     }
     100% {
-        background-position: -500% 40%;
+        background-position: -500% 34%;
     }
 }
+
 
 /******HÅNDKLÆDE OP******/
 
@@ -160,56 +210,70 @@ body {
 
 @keyframes oskar_up_kf {
     0% {
-        background-position: 0% 100%;
+        background-position: 0% 84%;
     }
     100% {
-        background-position: -2000% 100%;
+        background-position: -2000% 84%;
     }
 }
 
-
 .oskar_valg {
-    background-position: -2000% 100%;
+    background-position: -2000% 84%;
     transform: scaleX(-1);
 }
+
 
 /******SNAK******/
 
 .oskar_snak {
     animation-name: oskar_snak_kf;
     animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: steps(9);
 }
 
 @keyframes oskar_snak_kf {
     0% {
-        background-position: 0% 80%;
+        background-position: 0% 67%;
+        transform: scaleX(-1);
     }
     100% {
-        background-position: -900% 80%;
+        background-position: -900% 67%;
+        transform: scaleX(-1);
     }
 }
+
 
 /******GRIN******/
 
 .oskar_grin {
     animation-name: oskar_grin_kf;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(8);
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(4);
+    animation-fill-mode: both;
 }
 
 @keyframes oskar_grin_kf {
     0% {
-        background-position: 0% 60%;
+        background-position: 0% 100%;
+        transform: scaleX(-1);
     }
     100% {
-        background-position: -800% 60%;
+        background-position: -400% 100%;
+        transform: scaleX(-1);
     }
 }
 
+/******lettet******/
+
+.oskar_lettet{
+    background-position: -400% 100%;
+    transform: scaleX(-1);
+}
+
 /************************************OSKAR SPRITE SLUT************************************/
+
 
 /************************************OSKAR CONTAINER************************************/
 
@@ -217,6 +281,7 @@ body {
     position: absolute;
     overflow: hidden;
 }
+
 
 /******POSE******/
 
@@ -250,6 +315,7 @@ body {
 
 /************************************OSKAR CONTAINER SLUT************************************/
 
+
 /************************************DRENG1 SPRITE************************************/
 
 #dreng1_sprite {
@@ -258,6 +324,7 @@ body {
     height: 40.00vw;
     background-size: 900%;
 }
+
 
 /******START POSE******/
 
@@ -271,7 +338,6 @@ body {
 .dreng1_slet {
     background-position: 0 100%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -293,6 +359,7 @@ body {
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng1_walkcycle {
@@ -311,6 +378,7 @@ body {
         background-position: -400% 25%;
     }
 }
+
 
 /******PULL******/
 
@@ -331,7 +399,9 @@ body {
     }
 }
 
+
 /************************************DRENG1 SPRITE SLUT************************************/
+
 
 /************************************DRENG1 CONTAINER************************************/
 
@@ -340,9 +410,8 @@ body {
     overflow: hidden;
 }
 
-
 .dreng1_start_pose {
-  top: 30%;
+    top: 30%;
     left: 15%;
 }
 
@@ -366,12 +435,14 @@ body {
     }
 }
 
+
 /******STAA OSKAR******/
 
 .dreng1_staa_oskar {
     top: 28%;
     left: 35%;
 }
+
 
 /******MOVE RIGHT******/
 
@@ -394,6 +465,7 @@ body {
     }
 }
 
+
 /******MOVE LEFT******/
 
 .dreng1_move_left {
@@ -407,9 +479,6 @@ body {
         top: 28%;
         left: 35%;
         transform: scaleX(-1);
-
-
-
     }
     100% {
         top: 30%;
@@ -421,6 +490,7 @@ body {
 
 /************************************DRENG1 CONTAINER SLUT************************************/
 
+
 /************************************DRENG2 SPRITE************************************/
 
 #dreng2_sprite {
@@ -429,6 +499,7 @@ body {
     height: 40.00vw;
     background-size: 400%;
 }
+
 
 /******START POSE******/
 
@@ -442,7 +513,6 @@ body {
 .dreng2_slet {
     background-position: 0 32%;
 }
-
 
 
 /******LAUGHCYCLE******/
@@ -464,6 +534,7 @@ body {
     }
 }
 
+
 /******WALKCYCLE******/
 
 .dreng2_walkcycle {
@@ -484,8 +555,8 @@ body {
 }
 
 
-
 /************************************DRENG2 SPRITE SLUT************************************/
+
 
 /************************************DRENG2 CONTAINER************************************/
 
@@ -501,6 +572,7 @@ body {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    animation-delay: 1.5s;
 }
 
 @keyframes dreng2_move_right_kf {
@@ -519,6 +591,7 @@ body {
 
 /************************************DRENG2 CONTAINER SLUT************************************/
 
+
 /************************************HÅND************************************/
 
 #haand_container {
@@ -526,13 +599,13 @@ body {
     overflow: hidden;
 }
 
-
+.foran_indhold {
+    z-index: 1;
+}
 
 .haand_ind_pose {
     top: 25%;
     left: 2%;
-
-
 }
 
 .haand_billede_pose {
@@ -550,7 +623,6 @@ body {
     100% {
         top: 22%;
         left: 22%;
-
     }
 }
 
@@ -563,9 +635,8 @@ body {
 
 @keyframes haand_tilbage_kf {
     0% {
-          top: 22%;
+        top: 22%;
         left: 22%;
-
     }
     100% {
         top: 25%;
@@ -573,12 +644,9 @@ body {
     }
 }
 
-
 .haand_start_pose {
     top: 14%;
     left: -100%;
-
-
 }
 
 .haand_enter {
@@ -599,7 +667,6 @@ body {
 }
 
 
-
 /***SPRITE***/
 
 #haand_sprite {
@@ -607,24 +674,21 @@ body {
     width: 53vw;
     height: 55vw;
     background-size: 1100%;
-
 }
+
+
 
 .haand_rolig {
     background-position: 0% 0%;
 }
 
-
-
-
 .haand_tryk {
     animation-name: haand_tryk_kf;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: steps(11);
     animation-direction: alternate-reverse;
     animation-delay: 1s;
-
 }
 
 @keyframes haand_tryk_kf {
@@ -636,18 +700,40 @@ body {
     }
 }
 
+
+.haand_tryk_2 {
+    animation-name: haand_tryk_2_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(3);
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+}
+
+@keyframes haand_tryk_2_kf {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: -300% 100%;
+    }
+}
+
+
 /************************************HÅND SLUT************************************/
+
 
 /************************************INDHOLD************************************/
 
-/*
+
+
 #indhold_container {
     position: absolute;
-    width: 17.5vw;
+    width: 18vw;
     height: 24vw;
     top: 42%;
-    left: 30.29%;
-    transform:rotateZ(2.8deg);
+    left: 30%;
+    transform: skewX(-4deg) rotateY(4deg);
     background-color: black;
 }
 
@@ -738,14 +824,22 @@ body {
     position: absolute;
 }
 
+#billede_10 {
+    width: 5vw;
+    height: 5vw;
+    background-size: cover;
+    background-image:url(media/delete.jpg);
+    position: absolute;
+}
+
 .pos1 {
     top: 10%;
-    left: 0%;
+    left: 3%;
 }
 
 .pos2 {
     top: 10%;
-    left: 33%;
+    left: 34%;
 }
 
 .pos3 {
@@ -755,12 +849,12 @@ body {
 
 .pos4 {
     top: 37%;
-    left: 0%;
+    left: 3%;
 }
 
 .pos5 {
     top: 37%;
-    left: 33%;
+    left: 34%;
 }
 
 .pos6 {
@@ -770,12 +864,12 @@ body {
 
 .pos7 {
     top: 65%;
-    left: 0%;
+    left: 3%;
 }
 
 .pos8 {
     top: 65%;
-    left: 33%;
+    left: 34%;
 }
 
 .pos9 {
