@@ -1,8 +1,7 @@
 var erDerKlikketPaaAlleKnapperFlag = false;
-var klikTaeller = 0;
+var antalNudes = 0;
 
 $(window).on("load", startAnim);
-//cirkel er sprite//
 function startAnim() {
     console.log("animationen starter");
     $("#bruseren_drypper")[0].play();
@@ -13,6 +12,9 @@ function startAnim() {
     $("#valg2_container").hide();
     $("#indhold_container").hide();
     $("#billede_10").hide();
+    $("#text_container").hide();
+
+
 
 
     $("#bruser_container").addClass("dryp_pose");
@@ -134,7 +136,7 @@ function oskarOvertaler() {
 
     $("#dreng1_sprite").removeClass("dreng1_laughcycle");
     $("#dreng2_sprite").removeClass("dreng2_laughcycle");
-    $("#oskar_sprite").on("animationend",venOvertalt);
+    $("#oskar_sprite").on("animationend",startEnTimer);
 }
 /*
 function randomValg(){
@@ -154,7 +156,7 @@ function randomValg(){
 }*/
 
 /******************VEN OVERTALT**********************/
-
+/*
 function venOvertalt() {
     console.log("venOvertalt");
     $("#haand_container").off("animationend",fork);
@@ -185,6 +187,88 @@ function slettet() {
     $("#billede_10").show();
 }
 
+/***TILFØJ SLUTNING****/
+
+/******************START EN TIMER**********************/
+
+function startEnTimer() {
+    console.log("startEnTimer");
+    $("#haand_container").off("animationend",fork);
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#valg1").off("click", oskarOvertaler);
+    $("#valg2").off("click", oskarGriner);
+
+    $("#text_container").show();
+    $("#text_container").addClass("pulse2");
+
+
+    $("#haand_container").removeClass("foran_indhold");
+
+    $("#text_container").on("animationend",showBilleder);
+}
+
+
+function showBilleder (){
+    $("#text_container").hide();
+
+    $("#nude").addClass("pulse");
+    setTimeout(faerdig,50000); //kører functionen efter 5000 ms, start på puls//
+
+    $("#nude").on("click",nudeKlik); // kører denne funktion hvis du når at trykke på knappen inden 5000ms//
+}
+
+
+
+function nudeKlik() {
+    console.log("nudeKlik");
+    $("#nude").off("click",nudeKlik);
+
+    $(this).hide();
+    antalNudes++;
+
+    $("#nude").on("animationend", faerdig);
+}
+
+function faerdig() {
+    console.log("faerdig");
+    $("#hundcontainer").off("animationend", faerdig);
+
+    $("#hund").addClass("hundStartPic");
+    $("#hund").removeClass("spisGodbid");
+
+    if (antalNudes >= 9){
+        console.log("Over 9");
+        sletNudes();
+    } else {
+        console.log("Under 5");
+        delNudes();
+    }
+}
+
+
+function sletNudes() {
+    console.log("sletNudes");
+}
+
+function delNudes() {
+    console.log("delNudes");
+}
+
+/****************TIDEN ER GÅET*******/
+/*
+function tidenErGaaet() {
+    $("#monster_container").off("click",nudeKlik);
+    console.log("tidenErGaaet");
+
+    if(erDerKlikketPaaAlleKnapperFlag==true) {
+        sletNudes();
+    } else {
+        delNudes();
+    }
+
+}*/
+
 
 /******************OSKAR GRINER**********************/
 
@@ -207,3 +291,5 @@ function haandDelt() {
     $("#haand_sprite").addClass("haand_tryk_2");
 
 }
+
+/***TILFØJ SLUTNING****/
