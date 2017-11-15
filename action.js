@@ -7,6 +7,8 @@ function trykStart() {
     $("#startskaerm").addClass("show");
     $("#forgrund").hide();
     $("#mellemgrund").hide();
+     $("#bad_slutning").hide();
+    $("#god_slutning").hide();
     $("#baggrund").hide();
     $("#bruser_container").hide();
     $("#dreng1_container").hide();
@@ -254,7 +256,7 @@ function showBilleder() {
     $("#oskar_sprite").addClass("oskar_valg");
     $("#oskar_sprite").removeClass("oskar_slet_nude");
     $(".tryk").addClass("pulse");
-    setTimeout(haandDeltTo, 7000);
+    setTimeout(haandDeltTo, 6000);
     $(".tryk").on("click", nudeKlik);
 }
 
@@ -309,8 +311,8 @@ function timeOut() {
 
 function haandDeltTo() {
     console.log("haandDeltTo");
-    $("#aaah")[0].play();
-    $("#aaah")[0].loop = true;
+   /* $("#aaah")[0].play();
+    $("#aaah")[0].play();*/
     $("#venteMusik")[0].loop = false;
     $("#oskarUsikker")[0].loop = false;
     $("#klorHaar")[0].loop = false;
@@ -367,8 +369,15 @@ function godSlutning() {
     $("#indhold_container").hide();
     $("#text_container").hide();
     $("#startskaerm").hide();
-    $("#slutskaerm").show();
-    $("#link2_container").show();
+    $("#slutskaerm").hide();
+    $("#link2_container").hide();
+
+
+     $("#god_slutning").show();
+    $("#god_slutning").addClass("god_slutning_billede");
+
+
+    $("#god_slutning").on("animationend", slutFrame);
 }
 
 function badSlutning() {
@@ -389,6 +398,38 @@ function badSlutning() {
     $("#indhold_container").hide();
     $("#text_container").hide();
     $("#startskaerm").hide();
+    $("#slutskaerm").hide();
+    $("#link2_container").hide();
+     $("#bad_slutning").show();
+    $("#bad_slutning").addClass("bad_slutning_billede");
+
+
+    $("#bad_slutning").on("animationend", slutFrame);
+}
+
+function slutFrame() {
+    console.log("slutFrame");
+    $("#venteMusik")[0].loop = false;
+    $("#aaah")[0].loop = false;
+     $("#god_slutning").off("animationend", slutFrame);
+
+    $("#bad_slutning").off("animationend", slutFrame);
+    $("#forgrund").hide();
+    $("#mellemgrund").hide();
+    $("#baggrund").hide();
+    $("#bruser_container").hide();
+    $("#dreng1_container").hide();
+    $("#dreng2_container").hide();
+    $("#oskar_container").hide();
+    $("#haand_container").hide();
+    $("#valg1_container").hide();
+    $("#valg2_container").hide();
+    $("#indhold_container").hide();
+    $("#text_container").hide();
+    $("#startskaerm").hide();
     $("#slutskaerm").show();
     $("#link2_container").show();
+     $("#bad_slutning").hide();
+    $("#bad_slutning").addClass("bad_slutning_billede");
+
 }
