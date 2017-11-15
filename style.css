@@ -178,7 +178,7 @@ body {
 
 #oskar_sprite {
     background-image:url(media/SVG/oskar_spritesheet_endelig.svg);
-    width: 26.66vw;
+    width: 26vw;
     height: 40.00vw;
     background-size: 2100%;
 }
