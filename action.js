@@ -256,7 +256,7 @@ function showBilleder() {
     $("#oskar_sprite").addClass("oskar_valg");
     $("#oskar_sprite").removeClass("oskar_slet_nude");
     $(".tryk").addClass("pulse");
-    setTimeout(haandDeltTo, 6000);
+    setTimeout(haandDeltTo, 10000);
     $(".tryk").on("click", nudeKlik);
 }
 
